@@ -24,7 +24,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button button=(Button)this.findViewById(R.id.button);
         Button button2=(Button)this.findViewById(R.id.button2);
+        Button button3=(Button)this.findViewById(R.id.button3);
         final EditText editText=(EditText)this.findViewById(R.id.editText);
+        final EditText editText2=(EditText)this.findViewById(R.id.editText2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+encodeTelnum)));
+            }
+        });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url=editText2.getText().toString();
+                Intent intent=new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
             }
         });
     }

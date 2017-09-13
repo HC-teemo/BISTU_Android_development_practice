@@ -35,4 +35,22 @@
         android:ems="10"
         android:inputType="textPersonName" />
 
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_toStartOf="@+id/button2"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="http://" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignStart="@+id/button2"
+        android:text="打开浏览器" />
+
 </RelativeLayout>
